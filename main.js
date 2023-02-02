@@ -1,9 +1,15 @@
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'your-url-here', true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-    // success
-    document.querySelector('.primaryNavigation').innerHTML = xhr.responseText;
-  }
-};
-xhr.send();
+
+
+
+//let header = document.querySelectorAll("a")
+//link.addEventListener("click", () => {
+//console.log("callback fuction...");});
+//
+
+let link = querySelectorAll( "nav ul a");
+link.forEach(( element, index) => {
+  element.addEventlistener("click", (e) =>{
+  e.preventDefault();
+  console.log("hej");
+});
+});
